@@ -12,23 +12,18 @@ async function sendMessage(message) {
     };
 
     let response = await axios.post('/sendMessage', request);
-    console.log(response);
 }
 
 async function sendDocument(file) {
     const formdata = new FormData();
     formdata.append('chat_id', config.get('channel.id'));
     formdata.append('document', fs.createReadStream(path.resolve(file)));
-    console.log(formdata.getHeaders());
-
 
     formdata.pipe(concat({encoding: 'buffer'}, data => {
-          axios.post("/sendDocument", data, {
+          axios.post('/sendDocument', data, {
                   headers: formdata.getHeaders()
-                })
+          });
     }));
-
-
 }
 
 module.exports = {
