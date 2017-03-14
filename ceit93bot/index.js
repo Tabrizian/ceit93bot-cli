@@ -7,7 +7,7 @@ const FormData = require("form-data");
 
 async function sendMessage(message) {
     let request = {
-        chat_id: '@fakefakefakee',
+        chat_id: config.get('channel.id'),
         text: message
     };
 
@@ -17,7 +17,7 @@ async function sendMessage(message) {
 
 async function sendDocument(file) {
     const formdata = new FormData();
-    formdata.append('chat_id', '@fakefakefakee');
+    formdata.append('chat_id', config.get('channel.id'));
     formdata.append('document', fs.createReadStream(path.resolve(file)));
     console.log(formdata.getHeaders());
 
