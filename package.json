@@ -1,5 +1,5 @@
 {
-  "name": "bot-remote",
+  "name": "ceit93bot-cli",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -8,6 +8,11 @@
     "commander": "^2.9.0",
     "concat-stream": "^1.6.0",
     "config": "^1.25.1",
-    "form-data": "^2.1.2"
+    "form-data": "^2.1.2",
+    "jsonfile": "^2.4.0",
+    "lodash": "^4.17.4"
+  },
+  "bin": {
+    "tcli": "bin/index.js"
   }
 }
