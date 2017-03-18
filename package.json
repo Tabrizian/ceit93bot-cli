@@ -1,6 +1,6 @@
 {
     "name": "ceit93bot-cli",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "main": "index.js",
     "license": "MIT",
     "description": "Manage your channel with your bot :)",
