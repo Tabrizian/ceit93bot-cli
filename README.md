@@ -28,7 +28,7 @@ tcli config --channel @YOUR_CHANNEL_ID
 ```
 
 ## Usage
-Currently only sending message and documents are supported 
+Currently only sending messages and documents are supported 
 
 ### Sending message
 
